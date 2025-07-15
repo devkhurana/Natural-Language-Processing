@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Language Processing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="banner">
+        <h1>Natural Language Processing</h1>
+    </header>
+
+    <div class="container">
+        <a href="{{ url_for('sentiment_analysis') }}" class="box">Sentiment Analysis</a>
+        <a href="{{ url_for('zero_shot_classification') }}" class="box">Zero-shot Classification</a>
+        <a href="{{ url_for('text_generation') }}" class="box">Text Generation</a>
+        <a href="{{ url_for('sentiment_analysis') }}" class="box">Fill-mask</a>
+        <a href="{{ url_for('sentiment_analysis') }}" class="box">NER (Named Entity Recognition)</a>
+        <a href="{{ url_for('question_answering') }}" class="box">Question Answering</a>
+        <a href="{{ url_for('sentiment_analysis') }}" class="box">Feature Extraction</a>
+        <a href="{{ url_for('sentiment_analysis') }}" class="box">Summarization</a>
+        <a href="{{ url_for('translation') }}" class="box">Translation</a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Centering the container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Center vertically */
+        }
+
+        /* Centering the form content */
+        .content {
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Adjusting input box width */
+        .form-group textarea {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Styling the button */
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3498db;
+        }
+
+        /* Styling result area */
+        .result {
+            margin-top: 20px;
+        }
+
+        .result p {
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <h1>Translation</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Translate Text from English to French</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="text_input">Enter English Text:</label>
+                    <textarea id="text_input" name="text_input" rows="6" placeholder="Type your text here..."></textarea>
+                </div>
+                <button type="submit" class="btn">Translate</button>
+            </form>
+
+            {% if result %}
+            <div class="result">
+                <h3>Translated Text:</h3>
+                <p>{{ result }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
