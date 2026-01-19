@@ -102,3 +102,7 @@ Example (replace with your actual results):
    cd nlp-capstone-project
 pip install -r requirements.txt
 jupyter notebook
+
+## GUI Snapshot
+
+<img width="1179" height="876" alt="image" src="https://github.com/user-attachments/assets/33f53f19-9378-4c29-bce4-37512abdc227" />
